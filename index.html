@@ -12,7 +12,6 @@
       list-style: none;
     }
 
-    
     .arriba {
       transform: scale(1.2);
     }
@@ -30,46 +29,44 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <div class="text-center">
     <map name="mapa" class="figuras">
-      <area shape="circle" coords="40,100,15" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="90,100,15" href="" onmouseover="mostrar()"/>
-      <area shape="rectangle" coords="150,50,230,130" href="" onmouseover="mostrar()"/>
-      <area shape="rectangle" coords="270,50,390,150" href="" onmouseover="mostrar()"/>
-      <area shape="rectangle" coords="400,100,490,160" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="510,140,20" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="550,130,20" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="580,140,20" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="620,160,20" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="660,170,15" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="695,170,15" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="750,180,30" href="" onmouseover="mostrar()"/>
-      <area shape="circle" coords="800,190,15" href="" onmouseover="mostrar()"/>
-      <area shape="rectangle" coords="825,175,925,215" href="" onmouseover="mostrar()"/>
-      <area shape="rectangle" coords="950,175,1155,255" href="" onmouseover="mostrar()"/>
-      <area shape="rectangle" coords="1180,125,1450,255" href="" onmouseover="mostrar()"/>
+      <area shape="circle" coords="40,100,15" href="" onmouseover="mostrarArica()" onmouseout="esconder()"/>
+      <area shape="circle" coords="90,100,15" href="" onmouseover="mostrarIquique()" onmouseout="esconder()"/>
+      <area shape="rectangle" coords="150,50,230,130" href="" onmouseover="mostrarAntofa()" onmouseout="esconder()"/>
+      <area shape="rectangle" coords="270,50,390,150" href="" onmouseover="mostrarAtacama()" onmouseout="esconder()"/>
+      <area shape="rectangle" coords="400,100,490,160" href="" onmouseover="mostrarCoquimbo()" onmouseout="esconder()"/>
+      <area shape="circle" coords="510,140,20" href="" onmouseover="mostrarValpo()" onmouseout="esconder()"/>
+      <area shape="circle" coords="550,130,20" href="" onmouseover="mostrarMetropolitana()" onmouseout="esconder()"/>
+      <area shape="circle" coords="580,140,20" href="" onmouseover="mostrarBernardoO()" onmouseout="esconder()"/>
+      <area shape="circle" coords="620,160,20" href="" onmouseover="mostrarMaule()" onmouseout="esconder()"/>
+      <area shape="circle" coords="660,170,15" href="" onmouseover="mostrarÑuble()" onmouseout="esconder()"/>
+      <area shape="circle" coords="695,170,15" href="" onmouseover="mostrarBioBio()" onmouseout="esconder()"/>
+      <area shape="circle" coords="750,180,30" href="" onmouseover="mostrarAraucania()" onmouseout="esconder()"/>
+      <area shape="circle" coords="800,190,15" href="" onmouseover="mostrarRegionDeLosRios()" onmouseout="esconder()"/>
+      <area shape="rectangle" coords="825,175,925,215" href="" onmouseover="mostrarRegionDeLosLagos()" onmouseout="esconder()"/>
+      <area shape="rectangle" coords="950,175,1155,255" href="" onmouseover="mostrarAysen()" onmouseout="esconder()"/>
+      <area shape="rectangle" coords="1180,125,1450,255" href="" onmouseover="mostrarMagallanes()" onmouseout="esconder()"/>
     </map>
     
     <img src="https://aprotur.cl/wp-content/uploads/2020/07/sur.png" usemap="#mapa" >
   </div>
 
+  <div class="container text-center">
 
-
-  <div class="container text-center" id="card">
-
-    <div class="card">
-      <img src="" class="card-img-top shadow" alt="">
+    <div id="info" class="card" >
+      <img src="" class="card-img-top shadow" id="foto" alt="">
       <div class="card-body">
         <h5 class="card-title" id="region">Región:</h5>
         <p class="card-text" id="atractivos">Atractivos:</p>
-        <p class="card-text" id="clima">Clima:</p>
       </div>
     </div>
+
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
   
-
 <script src="./script.js"></script> 
 
 </body>
@@ -79,5 +76,6 @@
   $("area").hover(function () {
     $(this).toggleClass('arriba').siblings().toggleClass('abajo')
   })</script>
+
 
 </html>
